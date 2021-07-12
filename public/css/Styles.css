@@ -48,12 +48,36 @@ h2 {
   justify-content: center;
   padding: 2rem;
   background-color: #fafafa;
+  /* background-color: red; */
 }
+.weatherLocation input {
+  width: 95%;
+  height: 50px;
+  background: #353432;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  right: 0;
+  border-radius: 25px;
+  color: #fff;
+  font-weight: 800;
+  padding: 5px;
 
+  margin: auto;
+}
 .weatherLocation button {
-  background: #080705;
+  position: absolute;
+  background-color: rgb(36, 36, 213);
   color: #fff;
   border: 1px solid transparent;
+  right: 0;
+  height: 50px;
+  top: 2;
+  border-radius: 20px;
+  width: 90px;
+  margin-bottom: 0px;
+  margin-right: 18px;
+  cursor: pointer;
 }
 .weatherLocation input:focus {
   outline: 0 none;
@@ -101,10 +125,12 @@ h2 {
 .widget .weatherInfo .description .weatherCondition {
   text-transform: uppercase;
   font-size: 20px;
-  font-weight: 100;
+  font-weight: 400;
+  margin-top: 10px;
 }
 .widget .weatherInfo .description .place {
   font-size: 15px;
+  margin-top: 10px;
 }
 .widget .date {
   flex: 0 0 30%;
@@ -128,4 +154,18 @@ p a {
   text-decoration: none;
   color: #e4d6a7;
   font-size: 10px;
+}
+.country {
+  display: flex;
+  font-size: 20px;
+  margin-top: 10px;
+  text-decoration: line-through;
+}
+.error {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  color: rgb(169, 118, 118);
+  margin-left: -150px;
 }

@@ -12,11 +12,20 @@ const weatherData = (address, callback) => {
   request({ url, json: true }, (error, { body }) => {
     if (error) {
       console.log("can't find fetch dat from open weather map api", undefined);
+    } else if (
+      !body.main ||
+      !body.main.temp ||
+      !body.name ||
+      !body.weather ||
+      !body.sys
+    ) {
+      callback("Unable to find required data, try another location", undefined);
     } else {
       callback(undefined, {
         temperature: body.main.temp,
         description: body.weather[0].description,
         cityName: body.name,
+        country: body.sys.country,
       });
     }
   });
